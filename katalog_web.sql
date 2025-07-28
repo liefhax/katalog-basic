@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 22, 2025 at 12:34 PM
+-- Generation Time: Jul 28, 2025 at 07:27 AM
 -- Server version: 11.4.4-MariaDB-log
 -- PHP Version: 8.1.10
 
@@ -52,16 +52,17 @@ CREATE TABLE `produk` (
   `deskripsi` text DEFAULT NULL,
   `harga` int(11) NOT NULL,
   `harga_diskon` int(11) DEFAULT NULL,
-  `gambar` varchar(255) NOT NULL
+  `gambar` varchar(255) NOT NULL,
+  `stok` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id`, `nama`, `deskripsi`, `harga`, `harga_diskon`, `gambar`) VALUES
-(1, 'Serum Emina Brightening - Pink', 'Ini serum khusus salma maaa maa maaa', 120000, 99000, 'cover_w236_h255_emina-face-serum-30-ml-new-.png'),
-(2, 'Stain Lip - Pink', 'WOW', 40000, 45900, 'cover_w506_h506_dsc00158_04-ok-min.png');
+INSERT INTO `produk` (`id`, `nama`, `deskripsi`, `harga`, `harga_diskon`, `gambar`, `stok`) VALUES
+(1, 'Serum Emina Brightening - Pink', 'Ini serum khusus salma maaa maa maaa', 120000, 99000, 'cover_w236_h255_emina-face-serum-30-ml-new-.png', 100),
+(2, 'Stain Lip - Pink', 'WOW', 40000, 45900, 'cover_w506_h506_dsc00158_04-ok-min.png', 50);
 
 --
 -- Indexes for dumped tables
